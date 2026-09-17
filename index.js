@@ -48,6 +48,8 @@ async function initMod() {
                 tphlimit: 42,
                 crossoverSpeed: 6.7,
 				maxSlopePercentage: 5.5,
+                seatsPerCar: 49,
+                doorsPerCarPerSide: 4,
             },
             compatibleTrackTypes: ['heavy-metro', 'vn-HCMC1'],
             allowAtGradeRoadCrossing: true,
@@ -99,6 +101,8 @@ async function initMod() {
                 crossoverSpeed: 6.7,
                 maxCantMm: 120,
                 maxCantDeficiencyMm: 90,
+                seatsPerCar: 38,
+                doorsPerCarPerSide: 4,
             },
             compatibleTrackTypes: ['heavy-metro', 'vn-HN2A'],
             allowAtGradeRoadCrossing: true,
@@ -125,7 +129,7 @@ async function initMod() {
                 maxSpeed: 22.2,
                 maxSpeedLocalStation: 13.88,
                 //traincar
-                capacityPerCar: 235,
+                capacityPerCar: 236,
                 trainWidth: 2.8,
                 carLength: 20.0,
                 minCars: 4,
@@ -133,6 +137,8 @@ async function initMod() {
                 carsPerCarSet: 2,
                 minStationLength: 80,
                 maxStationLength: 125,
+                seatsPerCar: 24,
+                doorsPerCarPerSide: 4,
                 //costs
                 carCost: 3_200_000,
                 baseTrackCost: 102_260,
@@ -170,7 +176,7 @@ async function initMod() {
 
 			//success msg
 			API.ui.showNotification('Hanoi Line 3 loaded successfully', 'success')
-    
+
 		API.trains.registerTrainType({
             id: 'vn-HCMC2',
             name: "HCMC Metro Line 2",
@@ -191,6 +197,8 @@ async function initMod() {
                 carsPerCarSet: 3,
                 minStationLength: 80,
                 maxStationLength: 140,
+                seatsPerCar: 30,
+                doorsPerCarPerSide: 4,
                 //costs
                 carCost: 7_250_000,
                 baseTrackCost: 87_300,
@@ -228,7 +236,6 @@ async function initMod() {
 
 			//success msg
 			API.ui.showNotification('Ho Chi Minh City Metro Line 2 loaded successfully', 'success')
-            
     ;
 
     } catch (error) {
