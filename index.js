@@ -170,6 +170,65 @@ async function initMod() {
 
 			//success msg
 			API.ui.showNotification('Hanoi Line 3 loaded successfully', 'success')
+    
+		API.trains.registerTrainType({
+            id: 'vn-HCMC2',
+            name: "HCMC Metro Line 2",
+            description: "3-car Hyundai Rotem train set used on Ho Chi Minh City Metro line 2. Expandable to 5 or 6 cars",
+            stats: {
+                //speed
+                maxAcceleration: 1.1,
+                maxDeceleration: 1.1,
+                maxLateralAcceleration: 1.8,
+                maxSpeed: 30.5,
+                maxSpeedLocalStation: 13.88,
+                //traincar
+                capacityPerCar: 310,
+                trainWidth: 3.15,
+                carLength: 22,
+                minCars: 3,
+                maxCars: 6,
+                carsPerCarSet: 3,
+                minStationLength: 80,
+                maxStationLength: 140,
+                //costs
+                carCost: 7_250_000,
+                baseTrackCost: 87_300,
+                baseStationCost: 60_000_000,
+                trainOperationalCostPerHour: 400,
+                carOperationalCostPerHour: 50,
+                trackMaintenanceCostPerMeter: 300,
+                stationMaintenanceCostPerYear: 300,
+                scissorsCrossoverCost: 50,
+                //trackspecs
+                tphlimit: 42,
+                crossoverSpeed: 6.7,
+                parallelTrackSpacing: 2.66,
+                trackClearance: 2.1,
+                minTurnRadius: 25,
+                maxCantMm: 120,
+                maxCantDeficiencyMm: 90,
+                minStationTurnRadius: 600,
+                maxSlopePercentage: 5.5,
+                //times
+                stopTimeSeconds: 35,
+				turnaroundTimeSeconds: 90,
+            },
+            compatibleTrackTypes: ['heavy-metro', 'vn-HCMC2'],
+            allowAtGradeRoadCrossing: true,
+            appearance: {
+                color: '#00b4FF'
+            },
+            elevationMultipliers: {
+                AT_GRADE: 3, 
+                ELEVATED: 0, 
+                CUT_AND_COVER: 0
+            },
+		}),
+
+			//success msg
+			API.ui.showNotification('Ho Chi Minh City Metro Line 2 loaded successfully', 'success')
+            
     ;
 
     } catch (error) {
